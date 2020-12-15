@@ -11,7 +11,8 @@ import java.io.IOException;
 public class Mysecondserverlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Servlet被访问了");
+        String uname = req.getParameter("uname");
+        System.out.println("参数："+uname);
 
     }
 }
