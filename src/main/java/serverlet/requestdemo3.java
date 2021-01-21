@@ -12,9 +12,11 @@ import java.io.IOException;
 public class requestdemo3 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         BufferedReader reader = req.getReader();
-        boolean line;
-        while (line = reader.readLine() != null){
+        String line;
+        while ((line = reader.readLine()) != null){
+            req.setCharacterEncoding("UTF-8");
             System.out.println(line);
         }
 

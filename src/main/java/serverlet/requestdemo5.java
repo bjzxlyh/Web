@@ -8,23 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
 
-@WebServlet("/demo2")
-public class requestdemo2 extends HttpServlet {
+@WebServlet("/demo5")
+public class requestdemo5 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-        String username = req.getParameter("username");
-        String[] hobbies = req.getParameterValues("hobby");
-        /*for (String hobby:hobbies) {
-            System.out.println(hobby);
-        }*/
-        Enumeration<String> parameterNames = req.getParameterNames();
-        while (parameterNames.hasMoreElements()){
-            String name = parameterNames.nextElement();
-            System.out.println(name);
-            String value = req.getParameter(name);
-            System.out.println(value);
-            System.out.println("---------");
-        }
+        Object msg = req.getAttribute("msg");
+        System.out.println(msg);
+        System.out.println("dome5被访问......");
     }
 }
