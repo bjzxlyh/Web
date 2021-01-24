@@ -21,7 +21,7 @@ public class CheckCodeServlet extends HttpServlet {
         //2.美化图片
           //填充背景色
         Graphics g = image.getGraphics();//画笔对象
-        g.setColor(Color.BLUE);//设置画笔颜色
+        g.setColor(Color.GRAY);//设置画笔颜色
         g.fillRect(0,0,width,height);
           //画边框
         g.setColor(Color.BLACK);
